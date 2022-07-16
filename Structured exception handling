@@ -1,0 +1,16 @@
+Imports System
+
+Module module1
+    Sub Main()
+        Dim a = 0, b = 2, c As Integer
+
+        Try
+            c = b / a
+            System.Console.WriteLine("Answer: " & c)
+
+        Catch ex As Exception
+            System.Console.WriteLine("Exception overflow!")
+        End Try
+
+    End Sub
+End Module
