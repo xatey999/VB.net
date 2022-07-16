@@ -1,0 +1,14 @@
+Module Module1
+    Sub Main()
+        On Error GoTo Handler
+        Dim a As Integer = 0
+        Dim b As Integer = 128
+        Dim c As Integer
+        c = b / a
+        Console.WriteLine("Press Enter to continue...")
+        Console.ReadLine()
+        Exit Sub
+Handler:
+        Console.WriteLine("Error!")
+    End Sub
+End Module
