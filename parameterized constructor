@@ -1,0 +1,23 @@
+Imports System
+
+Module module1
+    Class sum
+        Dim a, b As Integer
+        Public Sub New(p As Integer, q As Integer)
+            a = p
+            b = q
+        End Sub
+        Public Function AddData() As Integer
+            Console.WriteLine(a + b)
+        End Function
+    End Class
+    Sub Main()
+        Dim c, d As Integer
+        Console.WriteLine("Enter values for parameters:")
+        c = Console.ReadLine()
+        d = Console.ReadLine()
+        Dim s1 As sum = New sum(c, d)
+        s1.AddData()
+
+    End Sub
+End Module
