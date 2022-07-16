@@ -1,0 +1,23 @@
+Imports System.IO
+Module fileProg
+    Sub Main()
+        Dim names As String() = New String() {"Ujjwal Adhikari",
+           "Binaya Koirala", "Laxman Parajuli"}
+        Dim s As String
+        Using sw As StreamWriter = New StreamWriter("names.txt")
+            For Each s In names
+                sw.WriteLine(s)
+            Next s
+        End Using
+        ' Read and show each line from the file. 
+        Dim line As String
+        Using sr As StreamReader = New StreamReader("names.txt")
+            line = sr.ReadLine()
+            While (line <> Nothing)
+                Console.WriteLine(line)
+                line = sr.ReadLine()
+            End While
+        End Using
+        Console.ReadKey()
+    End Sub
+End Module
