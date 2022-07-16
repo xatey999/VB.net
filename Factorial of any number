@@ -1,0 +1,15 @@
+Imports System
+
+Module Program
+    Sub Main()
+        Dim i, a As Integer, fact As Integer = 1
+        Console.WriteLine("Enter the num you want")
+        a = Console.ReadLine()
+
+        For i = 1 To a
+            fact = fact * i
+        Next
+
+        Console.WriteLine("The factorial is " & fact)
+    End Sub
+End Module
