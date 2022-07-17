@@ -1,0 +1,27 @@
+Imports System
+
+Module module1
+    Class shape
+        Protected w, h As Integer
+        Public Sub setwidth(ByVal width As Integer)
+            w = width
+
+        End Sub
+        Public Sub setheight(ByVal height As Integer)
+            h = height
+        End Sub
+    End Class
+
+    Class Rectangle : Inherits shape
+        Public Function getArea() As Integer
+            Return (w * h)
+        End Function
+    End Class
+    Sub Main()
+        Dim rect As Rectangle = New Rectangle()
+        rect.setwidth(5)
+        rect.setheight(7)
+
+        Console.WriteLine("Area:{0}", rect.getArea())
+    End Sub
+End Module
